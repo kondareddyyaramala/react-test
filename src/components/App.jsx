@@ -1,5 +1,14 @@
-import React from 'react';
+import React from 'react'
+import Header from './Header'
+import Main from './Main'
 
-const App = () => <div>Replace me with something you can be proud of.</div>;
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <Main />
+    </div>
+  )
+}
 
-export default App;
+export default App
