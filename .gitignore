@@ -1,0 +1,2 @@
+# exclude files that don't need to be commited to repo
+/node_modules
