@@ -1,10 +1,13 @@
 import React from 'react'
-const Registration = () => {
-    return (
-        <div>
-            Register page
-    </div>
-    )
+
+export class Registration extends React.Component {
+    render() {
+        return (
+            <div>
+                Register page
+        </div>
+        )
+    }
 }
 
 export default Registration;
