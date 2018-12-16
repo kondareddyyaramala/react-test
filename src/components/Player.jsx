@@ -16,7 +16,8 @@ export class Player extends React.Component {
         })
     }
 
-    handleSubmit() {
+    handleSubmit(event) {
+        event.preventDefault();
         fetch('https://players-api.developer.alchemy.codes/api/players', {
             method: 'POST',
             headers: {
@@ -33,7 +34,7 @@ export class Player extends React.Component {
         }).then(response => {
             return response.json();
         }).then(resp => {
-            if (resp.ok) {
+            if (resp.success) {
                 this.setState({ isCreatePlayerSuccessful: true })
             }
         });
