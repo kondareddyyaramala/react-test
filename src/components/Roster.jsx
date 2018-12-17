@@ -15,7 +15,7 @@ export class Roster extends React.Component {
             return response.json();
         }).then(resp => {
             console.table("Players ::: " + JSON.stringify(resp.players));
-            this.setState({ players: resp.players ? resp.players : []});
+            this.setState({ players: resp.players ? resp.players : [] });
         });
     }
 
@@ -23,14 +23,33 @@ export class Roster extends React.Component {
         const players = this.state.players || [];
         return (
             <div>
-                <Link to='/player/new'>Add a new player</Link>
+                <button type="submit" className="btn btn-primary">
+                    <Link to='/player/new'>Add a new player</Link>
+                </button>
+                <table className="table">
+                    <thead className="thead-dark">
+                        <tr>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Rating</th>
+                            <th scope="col">Handedness</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            players.map(player => {
+                                return (
+                                    <tr>
+                                        <td>{player.first_name}</td>
+                                        <td>{player.last_name}</td>
+                                        <td>{player.rating}</td>
+                                        <td>{player.handedness}</td>
+                                    </tr>);
 
-                <ul>{
-                    players.map(player => {
-                        return <li key={player.id}>{player.first_name}</li>
-                    })
-                }
-                </ul>
+                            })
+                        }
+                    </tbody>
+                </table>
             </div>
         )
     }

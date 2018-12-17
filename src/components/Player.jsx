@@ -46,25 +46,31 @@ export class Player extends React.Component {
         }
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>
-                    First Name:
-<input type="text" name="first_name" value={this.state.first_name} onChange={this.handleInputChange} />
-                </label>
-                <label>
-                    Last Name:
-<input type="text" name="last_name" value={this.state.last_name} onChange={this.handleInputChange} />
-                </label>
+                <div className="form-group">
+                    <label className="form-check-label">
+                        First Name:</label>
+                    <input type="text" className="form-control" name="first_name" value={this.state.first_name} onChange={this.handleInputChange} />
 
-                <label>
-                    Rating:
-<input type="text" name="rating" value={this.state.rating} onChange={this.handleInputChange} />
-                </label>
+                </div>
+                <div className="form-group">
+                    <label className="form-check-label">
+                        Last Name:</label>
+                    <input type="text" className="form-control" name="last_name" value={this.state.last_name} onChange={this.handleInputChange} />
 
-                <label>
-                    Handedness:
-<input type="text" name="handedness" value={this.state.handedness} onChange={this.handleInputChange} />
-                </label>
-                <input type="submit" value="Submit" />
+                </div>
+                <div className="form-group">
+                    <label className="form-check-label">
+                        Rating:</label>
+                    <input type="text" className="form-control" name="rating" value={this.state.rating} onChange={this.handleInputChange} />
+
+                </div>
+                <div className="form-group">
+                    <label className="form-check-label">
+                        Handedness:</label>
+                    <input type="text" className="form-control" name="handedness" value={this.state.handedness} onChange={this.handleInputChange} />
+
+                </div>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         )
     }
