@@ -24,7 +24,7 @@ export class Roster extends React.Component {
         return (
             <div>
                 <button type="submit" className="btn btn-primary">
-                    <Link to='/player/new'>Add a new player</Link>
+                    <Link to='/player/new' style={{color: 'white'}}>Add a new player</Link>
                 </button>
                 <table className="table">
                     <thead className="thead-dark">
