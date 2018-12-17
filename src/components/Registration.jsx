@@ -53,31 +53,31 @@ export class Registration extends React.Component {
                     <div className="form-group">
                         <label>
                             First Name:</label>
-                        <input type="text" className="form-control" name="first_name" value={this.state.first_name} onChange={this.handleInputChange} />
+                        <input type="text" id="firstName" className="form-control" name="first_name" value={this.state.first_name} onChange={this.handleInputChange} />
 
                     </div>
                     <div className="form-group">
                         <label>
                             Last Name:</label>
-                        <input type="text" className="form-control" name="last_name" value={this.state.last_name} onChange={this.handleInputChange} />
+                        <input type="text" id="lastName" className="form-control" name="last_name" value={this.state.last_name} onChange={this.handleInputChange} />
                     </div>
                     <div className="form-group">
                         <label>
                             Email: </label>
-                        <input type="text" className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange} />
+                        <input type="text" id="email" className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange} />
                     </div>
                     <div className="form-group">
                         <label>
                             Password:</label>
-                        <input type="text" className="form-control" name="password" value={this.state.password} onChange={this.handleInputChange} />
+                        <input type="text" id="password" className="form-control" name="password" value={this.state.password} onChange={this.handleInputChange} />
                     </div>
                     <div className="form-group">
                         <label>
                             Confirm Password: </label>
-                        <input type="text" className="form-control" name="confirm_password" value={this.state.confirm_password} onChange={this.handleInputChange} />
+                        <input type="text" id="confirmPassword" className="form-control" name="confirm_password" value={this.state.confirm_password} onChange={this.handleInputChange} />
                     </div>
 
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button id="register" type="submit" className="btn btn-primary">Submit</button>
                 </form>
             );
         }

@@ -49,28 +49,31 @@ export class Player extends React.Component {
                 <div className="form-group">
                     <label className="form-check-label">
                         First Name:</label>
-                    <input type="text" className="form-control" name="first_name" value={this.state.first_name} onChange={this.handleInputChange} />
+                    <input type="text" id="firstName" className="form-control" name="first_name" value={this.state.first_name} onChange={this.handleInputChange} />
 
                 </div>
                 <div className="form-group">
                     <label className="form-check-label">
                         Last Name:</label>
-                    <input type="text" className="form-control" name="last_name" value={this.state.last_name} onChange={this.handleInputChange} />
+                    <input type="text" id="lastName" className="form-control" name="last_name" value={this.state.last_name} onChange={this.handleInputChange} />
 
                 </div>
                 <div className="form-group">
                     <label className="form-check-label">
                         Rating:</label>
-                    <input type="text" className="form-control" name="rating" value={this.state.rating} onChange={this.handleInputChange} />
+                    <input type="text" id="rating" className="form-control" name="rating" value={this.state.rating} onChange={this.handleInputChange} />
 
                 </div>
                 <div className="form-group">
                     <label className="form-check-label">
                         Handedness:</label>
-                    <input type="text" className="form-control" name="handedness" value={this.state.handedness} onChange={this.handleInputChange} />
-
+                    {/* <input type="text" id="handedness" className="form-control" name="handedness" value={this.state.handedness} onChange={this.handleInputChange} /> */}
+                    <select id="handedness" className="form-control" name="handedness" value={this.state.handedness} onChange={this.handleInputChange}>
+                        <option value="left">Left</option>
+                        <option value="right">Right</option>
+                    </select>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" id="create" className="btn btn-primary">Submit</button>
             </form>
         )
     }

@@ -49,16 +49,16 @@ export class Login extends React.Component {
                     <div className="form-group">
                         <label className="form-check-label">
                             Email: </label>
-                        <input type="text" className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange} />
+                        <input type="text" id="email" className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange} />
 
                     </div>
                     <div className="form-group">
                         <label className="form-check-label">
                             Password:</label>
-                        <input type="text" className="form-control" name="password" value={this.state.password} onChange={this.handleInputChange} />
+                        <input type="text" id="password" className="form-control" name="password" value={this.state.password} onChange={this.handleInputChange} />
                     </div>
 
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button id="login" type="submit" className="btn btn-primary">Submit</button>
                 </form>
             );
         }
