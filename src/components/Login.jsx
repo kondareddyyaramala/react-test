@@ -29,7 +29,7 @@ export class Login extends React.Component {
 
             // store the user information
             localStorage.setItem("token", resp.token);
-            this.setState({ isAuthenticated : true});
+            this.setState({ isAuthenticated: true });
         });
     }
 
@@ -46,18 +46,19 @@ export class Login extends React.Component {
         } else {
             return (
                 <form onSubmit={this.handleSubmit}>
+                    <div className="form-group">
+                        <label className="form-check-label">
+                            Email: </label>
+                        <input type="text" className="form-control" name="email" value={this.state.email} onChange={this.handleInputChange} />
 
-                    <label>
-                        Email:
-                  <input type="text" name="email" value={this.state.email} onChange={this.handleInputChange} />
-                    </label>
+                    </div>
+                    <div className="form-group">
+                        <label className="form-check-label">
+                            Password:</label>
+                        <input type="text" className="form-control" name="password" value={this.state.password} onChange={this.handleInputChange} />
+                    </div>
 
-                    <label>
-                        Password:
-                  <input type="text" name="password" value={this.state.password} onChange={this.handleInputChange} />
-                    </label>
-
-                    <input type="submit" value="Submit" />
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             );
         }

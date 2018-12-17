@@ -3,6 +3,7 @@ import React from 'react';
 import 'whatwg-fetch';
 // Change me if you prefer sass,scss, less. (Note you may need to update the build config)
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDom from 'react-dom';
 import App from './components/App';
 import { BrowserRouter } from 'react-router-dom';
