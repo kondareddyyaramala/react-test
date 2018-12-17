@@ -39,7 +39,7 @@ export class Roster extends React.Component {
                         {
                             players.map(player => {
                                 return (
-                                    <tr>
+                                    <tr key={player.id}>
                                         <td>{player.first_name}</td>
                                         <td>{player.last_name}</td>
                                         <td>{player.rating}</td>
